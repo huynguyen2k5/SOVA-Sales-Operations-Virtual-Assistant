@@ -150,3 +150,39 @@ jobs:
 
       - name: Validate workflow syntax and shell scripts
         run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12
+
+  container-audit:
+    name: Container audit (${{ matrix.service }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - service: backend
+            context: backend
+            image: sova-api:ci
+          - service: frontend
+            context: frontend
+            image: sova-frontend:ci
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Build container image
+        env:
+          BUILD_CONTEXT: ${{ matrix.context }}
+          IMAGE_NAME: ${{ matrix.image }}
+        run: docker build --tag "$IMAGE_NAME" "$BUILD_CONTEXT"
+
+      - name: Scan image vulnerabilities
+        uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8 # v0.36.0
+        with:
+          image-ref: ${{ matrix.image }}
+          format: table
+          exit-code: "1"
+          ignore-unfixed: true
+          vuln-type: os,library
+          severity: HIGH,CRITICAL
