@@ -10,6 +10,8 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- Comprehensive backend, frontend, OpenAPI, full-stack, CodeQL, dependency,
+  secret, workflow, and container security gates with weekly Dependabot updates.
 - FastAPI application factory with health endpoint and stable problem-details errors.
 - Request ID propagation, input validation, and HTTP request logging middleware.
 - Async SQLAlchemy engine/session factory, Alembic scaffold, and transactional seed runner.
