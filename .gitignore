@@ -1,0 +1,30 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python caches, virtual environments, and build output
+**/__pycache__/
+**/*.py[cod]
+**/.mypy_cache/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.venv/
+*.egg-info/
+build/
+dist/
+htmlcov/
+.coverage
+
+# Frontend dependencies and build output (frontend is intentionally deferred)
+node_modules/
+frontend/dist/
+
+# Database migrations are reviewed source files and must be tracked.
+
+# Local container data
+postgres_data/
+backend/*.db
+
+# Local uv package cache
+.uv-cache/
