@@ -4,6 +4,10 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+### Changed
+
+- Redesigned the operational dashboard around actionable follow-ups, live interaction trends, product interest, support queues, and responsive quick actions.
+
 ### Added
 
 - FastAPI application factory with health endpoint and stable problem-details errors.
