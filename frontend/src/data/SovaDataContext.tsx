@@ -23,7 +23,7 @@ import type {
 
 type Schema = components["schemas"];
 
-interface SovaDataContextValue {
+export interface SovaDataContextValue {
   customers: Customer[];
   drafts: EmailDraft[];
   tickets: SupportTicket[];

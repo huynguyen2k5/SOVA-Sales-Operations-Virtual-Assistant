@@ -530,6 +530,7 @@ export const TICKET_STATUS_MAP: Record<
 > = {
   open: { label: "Mở", color: "#D97706", bg: "#FFFBEB" },
   in_progress: { label: "Đang xử lý", color: "#2563EB", bg: "#EFF6FF" },
+  waiting: { label: "Đang chờ", color: "#7C3AED", bg: "#F5F3FF" },
   resolved: { label: "Đã giải quyết", color: "#16A34A", bg: "#F0FDF4" },
   closed: { label: "Đã đóng", color: "#6B7280", bg: "#F3F4F6" },
 };
@@ -545,7 +546,7 @@ export const TICKET_PRIORITY_MAP: Record<
   low: { label: "Thấp", color: "#16A34A", bg: "#F0FDF4" },
   medium: { label: "Trung bình", color: "#D97706", bg: "#FFFBEB" },
   high: { label: "Cao", color: "#EA580C", bg: "#FFF7ED" },
-  critical: { label: "Khẩn cấp", color: "#DC2626", bg: "#FEF2F2" },
+  urgent: { label: "Khẩn cấp", color: "#DC2626", bg: "#FEF2F2" },
 };
 
 export const DRAFT_STATUS_MAP: Record<
