@@ -1,0 +1,6 @@
+company_name,contact_name,email,phone,product_sku,interest_level,interaction_type,interaction_summary,interaction_date
+Delta Mekong Manufacturing,Nguyen Minh Anh,minh.anh@delta-example.test,+84901234567,PKG-001,high,meeting,Requested a quotation for the standard package,2026-09-08
+Lotus North Trading,Tran Bao Long,bao.long@lotus-example.test,+84907654321,PKG-002,medium,email,Asked for delivery lead time and English brochure,2026-09-02
+Sunrise Components,Le Ha My,ha.my@sunrise-example.test,+84908881234,PKG-001,low,call,Initial discovery call completed,2026-08-20
+Riverstone Engineering,Pham Gia Huy,gia.huy@riverstone-example.test,+84906667890,PKG-003,high,quote,Quotation sent and awaiting response,2026-09-10
+Northstar Office Supply,Vo Thanh Tam,thanh.tam@northstar-example.test,+84909990123,PKG-002,medium,meeting,Needs a follow-up about implementation support,2026-08-28
